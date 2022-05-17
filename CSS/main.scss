@@ -1,0 +1,112 @@
+// ? Importing the global rules file.
+@import "./SASS/layout/_global-rules.scss";
+
+// ? Importing the colors file.
+@import "./SASS/variables/_colors.scss";
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Alef", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-color: #{$background-Color};
+  .text-cont-mobile {
+    width: 90%;
+    height: 20vh;
+    background-color: #{$main-Containers-Color};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1.7rem;
+    box-shadow: 0 7px 15px 0 rgba($color: #000000, $alpha: 0.2);
+    .welcome {
+      font-size: 1.5rem;
+    }
+    .mussal-title-mobile {
+      font-family: "Acme", sans-serif;
+      font-size: 1.7rem;
+    }
+  }
+  .text-cont-desktop {
+    display: none;
+  }
+  .signup-form {
+    width: 90%;
+    height: 65vh;
+    background-color: #{$main-Containers-Color};
+    box-shadow: 0 7px 15px 0 rgba($color: #000000, $alpha: 0.2);
+    border-radius: 1.7rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    .create-acc-para {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    #signup {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      div {
+          width: 100%;
+          height: 12vh;
+          display: grid;
+          grid-template-rows: 2.5rem 1fr;
+          grid-template-columns: 1fr 1fr auto;
+          label {
+              grid-area: 1 / 1 / 2 / 2;
+              width: 12rem;
+              font-size: 1.1rem;
+              font-weight: bold;
+          }
+          input {
+              width: 100%;
+              height: 3rem;
+              grid-area: 2 / 1 / 3 / 4;
+              border: none;
+              border-radius: 0.8rem; 
+              &:focus {
+                  border: none;
+                  outline: 3px solid #{$secondary-Containers-Color};
+              }
+          }
+          img {
+              grid-area: 2 / 3 / 3 / 4;
+              margin: 0.5rem 1rem 0 0;
+              width: 32px;
+          }
+      }
+      .signup-btn {
+          width: 15.8rem;
+          height: 3.4rem;
+          border-radius: 1rem;
+          border: none;
+          background-color: #{$secondary-Containers-Color};
+          color:#{$forms-color};
+          font-size: 1.5rem;
+          transition: transform 0.3s;
+          &:hover {
+              outline: 2px solid black;
+              transform: scale(1.05);
+              text-decoration: underline;
+          }
+      }
+    }
+  }
+}

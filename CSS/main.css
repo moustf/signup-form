@@ -1,0 +1,186 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Alef", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  background-color: #EBEAFA;
+}
+
+.container .text-cont-mobile {
+  width: 90%;
+  height: 20vh;
+  background-color: #F9EFF3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  border-radius: 1.7rem;
+  -webkit-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .text-cont-mobile .welcome {
+  font-size: 1.5rem;
+}
+
+.container .text-cont-mobile .mussal-title-mobile {
+  font-family: "Acme", sans-serif;
+  font-size: 1.7rem;
+}
+
+.container .text-cont-desktop {
+  display: none;
+}
+
+.container .signup-form {
+  width: 90%;
+  height: 65vh;
+  background-color: #F9EFF3;
+  -webkit-box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1.7rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .signup-form .create-acc-para {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.container .signup-form #signup {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .signup-form #signup div {
+  width: 100%;
+  height: 12vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2.5rem 1fr;
+      grid-template-rows: 2.5rem 1fr;
+  -ms-grid-columns: 1fr 1fr auto;
+      grid-template-columns: 1fr 1fr auto;
+}
+
+.container .signup-form #signup div label {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+  width: 12rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.container .signup-form #signup div input {
+  width: 100%;
+  height: 3rem;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 2 / 1 / 3 / 4;
+  border: none;
+  border-radius: 0.8rem;
+}
+
+.container .signup-form #signup div input:focus {
+  border: none;
+  outline: 3px solid #503E9D;
+}
+
+.container .signup-form #signup div img {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 3 / 3 / 4;
+  margin: 0.5rem 1rem 0 0;
+  width: 32px;
+}
+
+.container .signup-form #signup .signup-btn {
+  width: 15.8rem;
+  height: 3.4rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #503E9D;
+  color: #ffffff;
+  font-size: 1.5rem;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.container .signup-form #signup .signup-btn:hover {
+  outline: 2px solid black;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */
