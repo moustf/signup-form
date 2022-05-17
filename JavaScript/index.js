@@ -80,3 +80,31 @@ function validatePassword(password) {
     passwordClose.style.display = "block";
   }
 }
+
+// ? Creating the function which is responsible for showing the level of strength in the span.
+function checkStrength(password) {
+  let firstCheck = /[a-z]+/.test(password);
+  let secondCheck = /[A-Z]+/.test(password);
+  let thirdCheck = /[0-9]+/.test(password);
+  let fourthCheck = /[a-zA-Z0-9]{6,}/.test(password);
+  let checksArr = [firstCheck, secondCheck, thirdCheck, fourthCheck];
+  let test = checksArr.filter((bool) => bool === true);
+  if (test.length > 0) {
+    strengthSpan.style.display = "block";
+    if (test.length === 1) {
+      strengthLevelSpan.textContent = "very weak";
+      strengthLevelSpan.style.color = "red";
+    } else if (test.length === 2) {
+      strengthLevelSpan.textContent = "weak";
+      strengthLevelSpan.style.color = "orange";
+    } else if (test.length === 3) {
+      strengthLevelSpan.textContent = "intermediate";
+      strengthLevelSpan.style.color = "blue";
+    } else if (test.length === 4) {
+      strengthLevelSpan.textContent = "strong";
+      strengthLevelSpan.style.color = "green";
+    }
+  } else {
+    strengthSpan.style.display = "none";
+  }
+}
