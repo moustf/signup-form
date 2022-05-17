@@ -61,3 +61,22 @@ function validateEmail(email) {
 form.onsubmit = function (e) {
   e.preventDefault();
 };
+
+// ? Adding event listener to the password input to listen to the keyboard typing.
+passwordInput.addEventListener("keyup", () => {
+  validatePassword(passwordInput.value);
+  checkStrength(passwordInput.value);
+});
+
+// ? Creating the function which is responsible for validating the password input in case of strength.
+function validatePassword(password) {
+  let passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9]{6,}$/;
+  // ! Six Characters long, contains a low case letter, contains a capital case letter, and contains a number.
+  if (passwordRegex.test(password)) {
+    passwordApprove.style.display = "block";
+    passwordClose.style.display = "none";
+  } else {
+    passwordApprove.style.display = "none";
+    passwordClose.style.display = "block";
+  }
+}
