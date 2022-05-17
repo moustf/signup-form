@@ -60,4 +60,4 @@ This form is an imaginary signup form for my future personal website, also to pr
 
 ## ♦ Developer:
 
-This design and code is done by [Mustafa Salem](github.com/moustf), a junior web developer.
+This design and code is done by [Mustafa Salem](https://github.com/moustf), a junior web developer.
