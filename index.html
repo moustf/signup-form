@@ -4,7 +4,95 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- The favicon of the page -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/Mustafa Salem-logos_white_edited.png"
+    />
+    <!-- Acme font from google fonts library -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Alef font from google fonts library -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- The main stylesheet -->
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <title>Signup Form | MUSSAL</title>
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <section class="text-cont-mobile">
+        <p class="welcome">Welcome to:</p>
+        <h1 class="mussal-title-mobile">Mussal Personal Experience!</h1>
+      </section>
+      <section class="text-cont-desktop">
+        <h1 class="mussal-title-desktop">
+          Welcome to Mussal Personal Experience!
+        </h1>
+        <p class="desktop-para">What you will find here?</p>
+        <ul class="website-sections">
+          <li>Projects,</li>
+          <li>Blogs</li>
+          <li>Tutorials,</li>
+          <li>Code alongs,</li>
+          <li>And much more!</li>
+        </ul>
+      </section>
+      <section class="signup-form">
+        <form action="POST" id="signup">
+          <div class="text-cont">
+            <label for="text">Username: </label>
+            <input type="text" name="text" id="text-input" />
+            <img
+              src="./images/icons8-check-mark-48.png"
+              alt="approve check sign"
+            />
+            <img src="./images/icons8-close.svg" alt="decline close sign" />
+          </div>
+          <div class="email-cont">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email-input" />
+            <img
+              src="./images/icons8-check-mark-48.png"
+              alt="approve check sign"
+            />
+            <img src="./images/icons8-close.svg" alt="decline close sign" />
+          </div>
+          <div class="password-cont">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password-input" />
+            <img
+              src="./images/icons8-check-mark-48.png"
+              alt="approve check sign"
+            />
+            <img src="./images/icons8-close.svg" alt="decline close sign" />
+          </div>
+          <div class="confirm-password-cont">
+            <label for="confirm-password">Confirm password: </label>
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password-input"
+            />
+            <img
+              src="./images/icons8-check-mark-48.png"
+              alt="approve check sign"
+            />
+            <img src="./images/icons8-close.svg" alt="decline close sign" />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="./JavaScript/index.js"></script>
+  </body>
 </html>
