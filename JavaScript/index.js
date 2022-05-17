@@ -18,9 +18,10 @@ const confirmPasswordApprove = document.querySelector(
 const confirmPasswordClose = document.querySelectorAll(
   ".confirm-password-cont img"
 )[1];
+const strengthSpan = document.querySelector(".strength");
+const strengthLevelSpan = document.querySelector(".strength .level");
 const submitBtn = document.querySelector(".signup-btn");
 // ? Targeting elements end.
-
 
 // ? Adding event listener to the text input to listen to the keyboard typing.
 textInput.addEventListener("keyup", () => {
@@ -60,3 +61,66 @@ function validateEmail(email) {
 form.onsubmit = function (e) {
   e.preventDefault();
 };
+
+// ? Adding event listener to the password input to listen to the keyboard typing.
+passwordInput.addEventListener("keyup", () => {
+  validatePassword(passwordInput.value);
+  checkStrength(passwordInput.value);
+});
+
+// ? Creating the function which is responsible for validating the password input in case of strength.
+function validatePassword(password) {
+  let passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9]{6,}$/;
+  // ! Six Characters long, contains a low case letter, contains a capital case letter, and contains a number.
+  if (passwordRegex.test(password)) {
+    passwordApprove.style.display = "block";
+    passwordClose.style.display = "none";
+  } else {
+    passwordApprove.style.display = "none";
+    passwordClose.style.display = "block";
+  }
+}
+
+// ? Creating the function which is responsible for showing the level of strength in the span.
+function checkStrength(password) {
+  let firstCheck = /[a-z]+/.test(password);
+  let secondCheck = /[A-Z]+/.test(password);
+  let thirdCheck = /[0-9]+/.test(password);
+  let fourthCheck = /[a-zA-Z0-9]{6,}/.test(password);
+  let checksArr = [firstCheck, secondCheck, thirdCheck, fourthCheck];
+  let test = checksArr.filter((bool) => bool === true);
+  if (test.length > 0) {
+    strengthSpan.style.display = "block";
+    if (test.length === 1) {
+      strengthLevelSpan.textContent = "very weak";
+      strengthLevelSpan.style.color = "red";
+    } else if (test.length === 2) {
+      strengthLevelSpan.textContent = "weak";
+      strengthLevelSpan.style.color = "orange";
+    } else if (test.length === 3) {
+      strengthLevelSpan.textContent = "intermediate";
+      strengthLevelSpan.style.color = "blue";
+    } else if (test.length === 4) {
+      strengthLevelSpan.textContent = "strong";
+      strengthLevelSpan.style.color = "green";
+    }
+  } else {
+    strengthSpan.style.display = "none";
+  }
+}
+
+// ? Adding event listener to the confirm input to listen to the keyboard typing.
+confirmPasswordInput.addEventListener("keyup", () => {
+  confirmPasswords(passwordInput.value, confirmPasswordInput.value);
+});
+
+// ? Creating the function which is responsible for confirming the match of the two passwords.
+function confirmPasswords(pass1, pass2) {
+  if (pass1 === pass2) {
+    confirmPasswordApprove.style.display = "block";
+    confirmPasswordClose.style.display = "none";
+  } else {
+    confirmPasswordApprove.style.display = "none";
+    confirmPasswordClose.style.display = "block";
+  }
+}
