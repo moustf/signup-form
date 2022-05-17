@@ -26,3 +26,14 @@ This form is an imaginary signup form for my future personal website, also to pr
 - As a user, I should be able to check my username's and email's inputs validation.
 - As a user, I should be able to get my two password checked for mathcing or not matching.
 - As a user, I should be able to create an account by hitting the signup button.
+
+## ♦ How to install the project on your local machine:
+
+![signup-code](https://user-images.githubusercontent.com/77394697/168700008-76109be5-ec73-4a8a-943e-2fbfbb3b9cea.PNG)
+
+- You can click the *code* drop-down menu as illustrated in the picture above and copy the link to clone the repo.
+- Now go to your terminal and type: `git clone <the link here>` and then the repo will be cloned to your local machine.
+- By now you have to open your IDE -I recommend VSCode- and open the project.
+- to open a live page from your local machine project, you can download the `live Server` extension. This's a [link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to the extension.
+- Now right click with your mouse and choose: Open with live server.
+- Happy Coding!🤞
