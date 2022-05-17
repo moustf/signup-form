@@ -108,3 +108,19 @@ function checkStrength(password) {
     strengthSpan.style.display = "none";
   }
 }
+
+// ? Adding event listener to the confirm input to listen to the keyboard typing.
+confirmPasswordInput.addEventListener("keyup", () => {
+  confirmPasswords(passwordInput.value, confirmPasswordInput.value);
+});
+
+// ? Creating the function which is responsible for confirming the match of the two passwords.
+function confirmPasswords(pass1, pass2) {
+  if (pass1 === pass2) {
+    confirmPasswordApprove.style.display = "block";
+    confirmPasswordClose.style.display = "none";
+  } else {
+    confirmPasswordApprove.style.display = "none";
+    confirmPasswordClose.style.display = "block";
+  }
+}
