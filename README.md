@@ -46,3 +46,18 @@ This form is an imaginary signup form for my future personal website, also to pr
 - ➙ *Regex*.
 - ➙ *Git and GitHub*.
 - ➙ *SASS Preprocessor*
+
+## ♦ Wireframes:
+![20220516_220124](https://user-images.githubusercontent.com/77394697/168700680-b70a54c0-7886-4e32-b432-1922c138b86d.jpg)
+-
+![20220516_220134](https://user-images.githubusercontent.com/77394697/168700638-911d103b-aeb6-4428-b963-80abf8ce2842.jpg)
+
+## ♦ Design images:
+
+![mobile-signup](https://user-images.githubusercontent.com/77394697/168701097-4b685384-aa2f-4cd7-85c8-a9cedbb3b4a7.svg)
+-
+![desktop-signup](https://user-images.githubusercontent.com/77394697/168701100-6df4e0cf-b2ad-4f33-b40a-ce2dc083640c.svg)
+
+## ♦ Developer:
+
+This design and code is done by [Mustafa Salem](github.com/moustf), a junior web developer.
