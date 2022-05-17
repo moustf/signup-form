@@ -18,9 +18,10 @@ const confirmPasswordApprove = document.querySelector(
 const confirmPasswordClose = document.querySelectorAll(
   ".confirm-password-cont img"
 )[1];
+const strengthSpan = document.querySelector(".strength");
+const strengthLevelSpan = document.querySelector(".strength .level");
 const submitBtn = document.querySelector(".signup-btn");
 // ? Targeting elements end.
-
 
 // ? Adding event listener to the text input to listen to the keyboard typing.
 textInput.addEventListener("keyup", () => {
