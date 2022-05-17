@@ -37,3 +37,12 @@ This form is an imaginary signup form for my future personal website, also to pr
 - to open a live page from your local machine project, you can download the `live Server` extension. This's a [link](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to the extension.
 - Now right click with your mouse and choose: Open with live server.
 - Happy Coding!🤞
+
+## ♦ Technologies I used:
+
+- ➙ *HTML5*.
+- ➙ *CSS3*.
+- ➙ *javaScript*.
+- ➙ *Regex*.
+- ➙ *Git and GitHub*.
+- ➙ *SASS Preprocessor*
